@@ -11,9 +11,11 @@ class PCAExample:
     def __init__(self, data):
         self._data = data
 
+    def get_randomized_pca(self):
+        return self.RANDOMIZED_PCA.fit_transform(self._data)
+
     def show_randomized_pca_result(self):
-        randomized_pca_result = self.RANDOMIZED_PCA.fit_transform(self._data)
-        print("Randomized PCA:\n", randomized_pca_result)
+        print("Randomized PCA:\n", self.get_randomized_pca())
 
     def show_regular_pca_result(self):
         regular_pca_result = self.REGULAR_PCA.fit_transform(self._data)
