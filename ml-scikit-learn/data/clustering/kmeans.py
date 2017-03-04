@@ -16,6 +16,10 @@ class KMeansCluster:
         )
 
     @property
+    def clf(self):
+        return self._clf
+
+    @property
     def cluster_centers(self):
         return self._clf.cluster_centers_
 
